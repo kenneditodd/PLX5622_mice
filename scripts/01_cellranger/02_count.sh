@@ -1,16 +1,15 @@
-#!/bin/bash
-#$ -cwd  
-#$ -N n10x_count  
-#$ -q 1-day  
-#$ -M todd.kennedi@mayo.edu  
-#$ -m abe  
-#$ -pe threaded 16
-#$ -l h_vmem=16G  
-#$ -notify  
-#$ -j y  
+#!/bin/sh
+#SBATCH --job-name n10x_count
+#SBATCH --mem 50G
+#SBATCH --tasks 50
+#SBATCH --output logs/%x.%j.stdout
+#SBATCH --error logs/%x.%j.stderr
+#SBATCH --partition cpu-med
+#SBATCH --time 08:00:00 ## HH:MM:SS
+
 
 # change directory to your desired output folder
-cd /research/labs/neurology/fryer/m214960/Da_Mesquita/count
+cd /research/labs/neurology/fryer/m214960/PLX5622_mice/counts
 
 # source settings
 source $HOME/.bash_profile
@@ -26,7 +25,7 @@ echo "sample: $sample"
 cellranger count \
 	--id=$sample \
 	--sample=$sample \
-	--fastqs=/research/labs/neurology/fryer/projects/Da_Mesquita/mouse/scRNA \
+	--fastqs=/research/labs/neurology/fryer/projects/PLX5622_diet \
 	--transcriptome=/research/labs/neurology/fryer/projects/references/mouse/refdata-gex-mm10-2020-A \
 	--localcores=16 \
 	--localmem=50 
