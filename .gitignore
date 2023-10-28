@@ -3,4 +3,4 @@
 .RData
 .Ruserdata
 PLX5622_mice.Rproj
-scripts/*/outs
+scripts/*/logs
