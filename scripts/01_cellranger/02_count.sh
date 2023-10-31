@@ -1,7 +1,7 @@
 #!/bin/sh
 #SBATCH --job-name n10x_count
-#SBATCH --mem 50G
-#SBATCH --tasks 50
+#SBATCH --mem 16G
+#SBATCH --tasks 16
 #SBATCH --output logs/%x.%j.stdout
 #SBATCH --error logs/%x.%j.stderr
 #SBATCH --partition cpu-med
@@ -28,6 +28,6 @@ cellranger count \
 	--fastqs=/research/labs/neurology/fryer/projects/PLX5622_diet \
 	--transcriptome=/research/labs/neurology/fryer/projects/references/mouse/refdata-gex-mm10-2020-A \
 	--localcores=16 \
-	--localmem=50 
+	--localmem=16
 
 
