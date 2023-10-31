@@ -4,3 +4,6 @@
 .Ruserdata
 PLX5622_mice.Rproj
 scripts/*/logs
+counts/*
+results/*
+rObjects/*
