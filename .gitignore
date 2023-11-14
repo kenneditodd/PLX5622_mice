@@ -8,3 +8,4 @@ counts/*
 results/*
 rObjects/*
 scripts/*/*.html
+scripts/*/rsconnect/
