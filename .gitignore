@@ -7,3 +7,4 @@ scripts/*/logs
 counts/*
 results/*
 rObjects/*
+scripts/*/*.html
