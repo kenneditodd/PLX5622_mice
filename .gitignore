@@ -9,3 +9,4 @@ results/*
 rObjects/*
 scripts/*/*.html
 scripts/*/rsconnect/
+scripts/*/old/
